@@ -1,0 +1,23 @@
+tail -n + 2 Year.2010.ibtracs_all.v03r10.csv | head -n 1 | cut -d “,” -f  1-12 > ibtracs-2010-2015.csv
+
+tail -n + 4 Year.2010.ibtracs_all.v03r10.csv  | cut -d “,” -f  1-12 >> ibtracs-2010-2015.csv
+
+tail -n + 4 Year.2011.ibtracs_all.v03r10.csv  | cut -d “,” -f  1-12 >> ibtracs-2010-2015.csv
+
+tail -n + 4 Year.2012.ibtracs_all.v03r10.csv  | cut -d “,” -f  1-12 >> ibtracs-2010-2015.csv
+
+tail -n + 4 Year.2013.ibtracs_all.v03r10.csv  | cut -d “,” -f  1-12 >> ibtracs-2010-2015.csv
+
+tail -n + 4 Year.2014.ibtracs_all.v03r10.csv  | cut -d “,” -f  1-12 >> ibtracs-2010-2015.csv
+
+tail -n + 4 Year.2015.ibtracs_all.v03r10.csv  | cut -d “,” -f  1-12 >> ibtracs-2010-2015.csv
+cut -d "," -f 1 ibtracs-2010-2015.csv| uniq > serial-numbers.txt
+cut -d "," -f 2 ibtracs-2010-2015.csv | uniq -c
+rm records-per-year.txt /Users/zhangkehui/Desktop/UCB/workout1/output
+cut -d "," -f 4 ibtracs-2010-2015.csv | uniq -c > basin-frequencies.txt
+
+rm basin-frequencies.txt /Users/zhangkehui/Desktop/UCB/workout1/output
+cut -d "," -f 5 ibtracs-2010-2015.csv | uniq -c > sub-basin-frequencies.txt
+
+rm sub-basin-frequencies.txt /Users/zhangkehui/Desktop/UCB/workout1/output
+
